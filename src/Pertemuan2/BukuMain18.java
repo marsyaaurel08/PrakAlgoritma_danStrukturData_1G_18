@@ -14,7 +14,9 @@ public class BukuMain18 {
         bk1.tampilInformasi();
         bk1.terjual(5);
         bk1.gantiHarga(60000);
-        bk1.tampilInformasi();
+        bk1.hitungHargaTotal(0);
+        bk1.hitungDiskon(0);
+        bk1.hitungHargaBayar(0);
 
         Buku18 bk2 = new Buku18("Self Reward","Maheera Ayesha",160, 29, 59000);
         bk2.terjual(11);
@@ -22,6 +24,7 @@ public class BukuMain18 {
 
         Buku18 bk3 = new Buku18("Marsya", "Marsya Aurelia S",190, 19, 80000);
         bk3.tampilInformasi();
+
 
 
     }

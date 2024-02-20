@@ -8,6 +8,7 @@ public class Buku18 {
     public Buku18() {
 
     }
+
     public Buku18(String jud, String pg, int hal, int stok, int har) {
         judul = jud;
         pengarang = pg;
@@ -25,8 +26,10 @@ public class Buku18 {
     }
 
     void terjual(int jml) {
-        if (stok > 0){
-            stok -= jml;}
+        if (stok > 0) {
+            stok -= jml;
+            System.out.println("Jumlah Buku Terjual: "+ jml);
+        }
     }
 
     void restock(int jml) {
@@ -36,5 +39,38 @@ public class Buku18 {
     void gantiHarga(int hrg) {
         harga = hrg;
     }
-   
+
+    void hitungHargaTotal(int total) {
+        int hargaTotal = harga * stok;
+        System.out.println("Harga total: Rp " + hargaTotal);
+    }
+
+    void hitungDiskon(int dis) {
+        int hargaTotal = harga * stok;
+        double diskon = 0.0;
+
+        if (hargaTotal > 150000) {
+            diskon = 0.12;
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            diskon = 0.05;
+        }
+
+        double totalDiskon = hargaTotal * diskon;
+        System.out.println("Diskon: " + (diskon * 100) + "%");
+    }
+
+    void hitungHargaBayar(int bayar) {
+        int hargaTotal = harga * stok;
+        double diskon = 0.0;
+
+        if (hargaTotal > 150000) {
+            diskon = 0.12;
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            diskon = 0.05;
+        }
+
+        double totalDiskon = hargaTotal * diskon;
+        double hargaBayar = hargaTotal - totalDiskon;
+        System.out.println("Harga bayar setelah diskon: Rp " + hargaBayar);
+    }
 }
