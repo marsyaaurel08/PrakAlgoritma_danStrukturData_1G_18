@@ -5,7 +5,9 @@ public class Buku18 {
     String judul, pengarang;
     int halaman, stok, harga;
 
+    public Buku18() {
 
+    }
     public Buku18(String jud, String pg, int hal, int stok, int har) {
         judul = jud;
         pengarang = pg;
