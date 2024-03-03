@@ -23,5 +23,10 @@ public class Segitiga18 {
         sgArray[2] = new Segitiga18 (15, 6);
         sgArray[3] = new Segitiga18 (25, 10);
         
+            for (int i = 0; i < 4; i++) {
+                System.out.println("Luas Segitiga ke- "+i+ ": "+ sgArray[i].hitungLuas());
+                System.out.println("Keliling Segitiga ke- "+i+": "+ sgArray[i].hitungKeliling());
+            }
+        }
     }
-}
+
