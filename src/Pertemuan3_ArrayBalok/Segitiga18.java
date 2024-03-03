@@ -16,4 +16,12 @@ public class Segitiga18 {
         return alas + tinggi + sisiMiring;
     }
     
+    public static void main(String[] args) {
+        Segitiga18 sgArray[] = new Segitiga18 [4];
+        sgArray[0] = new Segitiga18 (10, 4);
+        sgArray[1] = new Segitiga18 (20, 10);
+        sgArray[2] = new Segitiga18 (15, 6);
+        sgArray[3] = new Segitiga18 (25, 10);
+        
+    }
 }
