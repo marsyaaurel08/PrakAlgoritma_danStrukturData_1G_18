@@ -3,6 +3,10 @@ package minggu5;
 public class Pangkat18 {
     public int nilai, pangkat;
 
+    public Pangkat18(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
     public int pangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i < n; i++) {
