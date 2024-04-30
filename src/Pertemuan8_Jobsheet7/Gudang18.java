@@ -1,5 +1,5 @@
 package Pertemuan8_Jobsheet7;
-
+import java.util.Stack;
 public class Gudang18 {
     Barang18[] tumpukan;
     int size;
@@ -38,6 +38,7 @@ public class Gudang18 {
             Barang18 delete = tumpukan[top];
             top--;
             System.out.println("Barang "+delete.nama+ " diambil dari gudang!");
+            System.out.println("Kode unik dalam biner: "+konversiDesimalKeBiner(delete.kode));
             return delete;
         }else{
             System.out.println("Tumpukan barang kosong");
@@ -64,5 +65,19 @@ public class Gudang18 {
         }else{
             System.out.println("Tumpukan barang kosong!");
         } 
+    }
+    public String konversiDesimalKeBiner (int kode){
+        StackKonversi18 stack = new StackKonversi18();
+        while (kode >0){
+            int sisa = kode%2;
+            stack.push(sisa);
+            kode = kode / 2;
+        }
+        String biner = new String();
+        while(!stack.isEmpty()){
+            biner += stack.pop();
+            
+        }
+        return biner;
     }
 }
