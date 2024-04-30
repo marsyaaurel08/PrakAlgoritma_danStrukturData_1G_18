@@ -9,6 +9,7 @@ public class QueueMain {
         System.out.println("2. Antrian Keluar");
         System.out.println("3. Cek antrian terdepan");
         System.out.println("4. Cek semua antrian");
+        System.out.println("5. Cek Antrian paling belakang");
         System.out.println("------------------------");
     }
 
@@ -22,7 +23,7 @@ public class QueueMain {
         do {
             menu();
             pilih = sc.nextInt();
-            sc.nextLine(); 
+            sc.nextLine();
 
             switch (pilih) {
                 case 1:
@@ -52,12 +53,15 @@ public class QueueMain {
                 case 4:
                     antri.print();
                     break;
+                case 5:
+                    antri.peekRear();
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid!");
                     break;
             }
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4);
+        } while (pilih >= 1 && pilih <= 5);
 
-        sc.close(); 
+        sc.close();
     }
 }
