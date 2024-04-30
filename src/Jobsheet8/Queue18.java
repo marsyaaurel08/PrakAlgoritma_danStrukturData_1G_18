@@ -56,7 +56,7 @@ public class Queue18 {
             System.out.println("Queue masih kosong");
         }
     }
-    public void Enqueue (int dt){
+    public void Enqueue (int dt)throws Exception{
         if (IsFull()){
             System.out.println("Queue sudah penuh!");
         }else{
@@ -72,6 +72,7 @@ public class Queue18 {
             data[rear] = dt;
             size++;
         }
+        System.exit(0);
     }
     public int Dequeue(){
         int dt=0;
@@ -90,6 +91,7 @@ public class Queue18 {
                 }
             }
         }
+        System.exit(0);
         return dt;
     }
 }
