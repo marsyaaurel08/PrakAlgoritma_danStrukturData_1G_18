@@ -16,6 +16,9 @@ public class DoubleLinkedListsMain {
         dll.print();
         System.out.println("Size : "+dll.size());
         System.out.println("===============================================");
+        System.out.println("Data awal pada linked lists adalah: "+dll.getFirst());
+        System.out.println("Data akhir pada linked lists adalah: "+dll.getLast());
+        System.out.println("Data indeks ke-1 pada linked lists adalah: "+dll.get(1));
         dll.clear();
         dll.print();
         System.out.println("Size : "+dll.size());
@@ -38,6 +41,8 @@ public class DoubleLinkedListsMain {
         dll.remove(1);
         dll.print();
         System.out.println("Size : "+dll.size());
+
+        
         
     }
 }
