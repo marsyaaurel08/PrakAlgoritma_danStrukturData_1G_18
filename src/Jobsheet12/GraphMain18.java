@@ -53,6 +53,10 @@ public class GraphMain18 {
             System.out.println("Hasil setelah penghapusan edge");
             gdg.removeEdgeM(2, 1);
             gdg.printGraphM();
+            System.out.println("OutDegree dari node 1: " + gdg.outDegree(1));
+            System.out.println("InDegree dari node 1: " + gdg.inDegree(1));
+            System.out.println("Degree dari node 1: " + gdg.degree(1));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
