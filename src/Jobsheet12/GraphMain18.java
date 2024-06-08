@@ -36,8 +36,23 @@ public class GraphMain18 {
                 System.err.println("Terjadi kesalahan: " + e.getMessage());
             }
             
-            
             sc18.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+         
+        GraphMatriks18 gdg = new GraphMatriks18(4);
+        try {
+            gdg.makeEdge(0, 1, 50);
+            gdg.makeEdge(1, 0, 60);
+            gdg.makeEdge(1, 2, 70);
+            gdg.makeEdge(2, 1, 80);
+            gdg.makeEdge(2, 3, 40);
+            gdg.makeEdge(3, 0, 90);
+            gdg.printGraphM();
+            System.out.println("Hasil setelah penghapusan edge");
+            gdg.removeEdgeM(2, 1);
+            gdg.printGraphM();
         } catch (Exception e) {
             e.printStackTrace();
         }
